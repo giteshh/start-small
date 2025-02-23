@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {SearchComponent} from '../search/search.component';
 import {RecipeInterface} from '../../../../interfaces/recipe-interface';
 import {DataService} from '../../../../services/data.service';
@@ -11,6 +11,7 @@ import {NgFor, NgIf} from '@angular/common';
   styleUrl: './recipes.component.scss',
 })
 export class RecipesComponent {
+  @Input() searchedRecipe: any;
   recipes: RecipeInterface[] = [];
   isLoading = true;
   loadingCards = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -24,5 +25,9 @@ export class RecipesComponent {
       this.recipes = res.recipes;
       this.isLoading = false;
     });
+  }
+
+  onSearchRecipes(filteredRecipes: RecipeInterface[]) {
+     this.recipes = filteredRecipes;
   }
 }

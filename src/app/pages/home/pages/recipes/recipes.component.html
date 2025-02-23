@@ -1,11 +1,11 @@
-<app-search></app-search>
+<app-search (searchResults)="onSearchRecipes($event)"></app-search>
 <div class="cards">
   <div class="card" *ngFor="let recipe of recipes">
     <div class="image">
       <img [src]="recipe.image" alt="recipe"/>
     </div>
     <div class="content">
-      <h4>{{ recipe.name }}</h4>
+      <h5>{{ recipe.name }}</h5>
       <p> {{ recipe.cuisine }} cuisine</p>
       <p>Ready in {{ recipe.cookTimeMinutes }} minutes</p>
     </div>

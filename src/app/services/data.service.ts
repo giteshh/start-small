@@ -19,4 +19,8 @@ export class DataService {
   getRecipes(): Observable<RecipeInterface> {
     return this.http.get<RecipeInterface>(this.apiUrl + '/recipes');
   }
+
+  searchRecipes(query: string): Observable<RecipeInterface> {
+    return this.http.get<RecipeInterface>(this.apiUrl + '/recipes/search/' + query);
+  }
 }
