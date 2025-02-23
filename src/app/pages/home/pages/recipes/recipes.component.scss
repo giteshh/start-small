@@ -3,15 +3,15 @@
 
 .cards {
   display: flex;
-  //align-items: center;
-  //justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   padding: 30px;
   font-family: 'Raleway', sans-serif;
 }
 
 .card {
   margin: 10px;
-  width: 300px;
+  width: 220px;
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -25,7 +25,7 @@
   }
 
   .content {
-    padding: 20px 30px;
+    padding: 10px 15px;
   }
 }
 
@@ -47,11 +47,11 @@
   }
 
   h2 {
-    height: 30px;
+    height: 25px;
   }
 
   p {
-    height: 70px;
+    height: 20px;
   }
 }
 

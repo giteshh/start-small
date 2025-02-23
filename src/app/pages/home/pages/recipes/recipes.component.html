@@ -2,27 +2,23 @@
 <div class="cards">
   <div class="card" *ngFor="let recipe of recipes">
     <div class="image">
-      <img src="{{recipe.image}}"/>
+      <img [src]="recipe.image" alt="recipe"/>
     </div>
     <div class="content">
-      <h2>{{recipe.name}}</h2>
-      <p>Look at this sleepiest pupper!</p>
-    </div>
-  </div>
-
-  <div class="card is-loading">
-    <div class="image"></div>
-    <div class="content">
-      <h2></h2>
-      <p></p>
+      <h4>{{ recipe.name }}</h4>
+      <p> {{ recipe.cuisine }} cuisine</p>
+      <p>Ready in {{ recipe.cookTimeMinutes }} minutes</p>
     </div>
   </div>
 
-  <div class="card is-loading">
-    <div class="image"></div>
-    <div class="content">
-      <h2></h2>
-      <p></p>
+  <div class="cards" *ngIf="isLoading">
+    <div class="card is-loading" *ngFor="let card of loadingCards; let index = index">
+      <div class="image"></div>
+      <div class="content">
+        <h2></h2>
+        <p></p>
+        <p></p>
+      </div>
     </div>
   </div>
 </div>

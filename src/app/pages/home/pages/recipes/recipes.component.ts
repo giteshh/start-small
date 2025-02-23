@@ -2,17 +2,18 @@ import {Component} from '@angular/core';
 import {SearchComponent} from '../search/search.component';
 import {RecipeInterface} from '../../../../interfaces/recipe-interface';
 import {DataService} from '../../../../services/data.service';
-import {CommandModule} from '@angular/cli/src/command-builder/command-module';
-import {NgForOf} from '@angular/common';
+import {NgFor, NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-recipes',
-  imports: [SearchComponent, NgForOf],
+  imports: [SearchComponent, NgFor, NgIf],
   templateUrl: './recipes.component.html',
   styleUrl: './recipes.component.scss',
 })
 export class RecipesComponent {
   recipes: RecipeInterface[] = [];
+  isLoading = true;
+  loadingCards = [1, 2, 3, 4, 5, 6, 7, 8];
 
   constructor(private dataService: DataService) {
     this.getRecipes();
@@ -21,11 +22,7 @@ export class RecipesComponent {
   getRecipes() {
     this.dataService.getRecipes().subscribe((res: any) => {
       this.recipes = res.recipes;
-      console.log(res.recipes)
+      this.isLoading = false;
     });
-  }
-
-  trackByFn(index: number, item: any): number {
-    return item.id; // Return the unique identifier (e.g., 'id')
   }
 }
