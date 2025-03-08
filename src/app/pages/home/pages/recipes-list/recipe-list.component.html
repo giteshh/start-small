@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+
+  <h1>Recipes List</h1>
+<div class="cards">
+  <div class="card" *ngFor="let recipe of recipes">
+    <div class="image">
+      <img [src]="recipe.image" alt="recipe"/>
+    </div>
+    <div class="content">
+      <h5>{{ recipe.name }}</h5>
+      <p> {{ recipe.cuisine }} cuisine</p>
+      <p>Ready in {{ recipe.cookTimeMinutes }} minutes</p>
+    </div>
+  </div>
+
+  <div class="cards" *ngIf="isLoading">
+    <div class="card is-loading" *ngFor="let card of loadingCards; let index = index">
+      <div class="image"></div>
+      <div class="content">
+        <h2></h2>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
