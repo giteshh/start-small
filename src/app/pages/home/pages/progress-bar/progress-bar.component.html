@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+<div class="main-container">
+  <h1>Progress Bar</h1>
+  <div class="progress-bar-container">
+    <div class="progress-bar" [ngStyle]="{background : backgroundColor, width: completedPercentage + '%'}">
+      {{ completedPercentage }} %
+    </div>
+  </div>
+  <button class="button" (click)="onIncrease()">
+    <div class="text">
+      Next
+    </div>
+  </button>
+</div>
