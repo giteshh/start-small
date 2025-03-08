@@ -1,0 +1,58 @@
+<app-navbar></app-navbar>
+<h1>Filter Recipes</h1>
+<!--filter dropdown-->
+<div class="dropdown-container">
+<div class="dropdown">
+  <label>
+    Filter by cuisine
+    <i class="fa fa-filter"></i>
+  </label>
+  <select [(ngModel)]="selectedCuisine" (change)="filterByCuisine($event)">
+    <option selected="">Choose Cuisine Category</option>
+    <option value="all">All</option>
+    <option *ngFor="let item of cuisineOptions" [value]="item">{{ item }}</option>
+  </select>
+</div>
+<!--sorting-->
+<div class="dropdown">
+  <label>
+    Sort by
+    <i class="fa fa-arrow-down-wide-short"></i>
+  </label>
+  <select [(ngModel)]="selectedCuisine" (change)="sortByCookingTime($event)">
+    <option [value]="'all'" selected>All</option>
+    <option *ngFor="let item of cookingTime" [value]="item">Ready in {{ item }} minutes</option>
+  </select>
+</div>
+</div>
+
+<div class="cards">
+  <div class="card" *ngFor="let recipe of recipes">
+    <div class="image">
+      <img [src]="recipe.image" alt="recipe"/>
+    </div>
+    <div class="content">
+      <h5>{{ recipe.name }}</h5>
+      <p>
+        <i class="fa fa-utensils margin-right-5"></i>
+        {{ recipe.cuisine }} cuisine
+      </p>
+      <p>
+        <i class="fa fa-clock margin-right-5"></i>
+        {{ recipe.cookTimeMinutes }} minutes
+      </p>
+    </div>
+  </div>
+
+  <div class="cards" *ngIf="isLoading">
+    <div class="card is-loading" *ngFor="let card of loadingCards; let index = index">
+      <div class="image"></div>
+      <div class="content">
+        <h2></h2>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+

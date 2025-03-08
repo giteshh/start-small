@@ -25,9 +25,9 @@ export class HomeComponent {
       routerLink: '/search-recipes'
     },
     {
-      name: 'Sort/Filter Recipe',
-      description: 'Sort or filter recipes',
-      routerLink: '/search-recipes'
+      name: 'Filter Recipe',
+      description: 'Filter & Sorting recipes',
+      routerLink: '/filter-recipes'
     },
     {
       name: 'Progress bar',
