@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+<div class="image-container">
+  <h1>Image Carousel</h1>
+  <img src="{{image}}" alt="image"/>
+  <div class="button-group">
+    <button (click)="onPreviousImage()">
+      <i class="fa fa-arrow-left"></i>
+    </button>
+    <button (click)="onNextImage()">
+      <i class="fa fa-arrow-right"></i>
+    </button>
+  </div>
+</div>
+

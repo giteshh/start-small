@@ -34,6 +34,11 @@ export class HomeComponent {
       description: 'Custom progress bar',
       routerLink: '/progress-bar'
     },
+    {
+      name: 'Image Carousel',
+      description: 'Custom carousel',
+      routerLink: '/image-carousel'
+    },
   ]
 
 }
