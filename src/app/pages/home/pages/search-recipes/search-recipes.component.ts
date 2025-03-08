@@ -1,16 +1,17 @@
 import {Component, Input} from '@angular/core';
-import {SearchComponent} from '../search/search.component';
+import {SearchBarComponent} from '../search-bar/search-bar.component';
 import {RecipeInterface} from '../../../../interfaces/recipe-interface';
 import {DataService} from '../../../../services/data.service';
 import {NgFor, NgIf} from '@angular/common';
+import {NavbarComponent} from "../navbar/navbar.component";
 
 @Component({
-  selector: 'app-recipes',
-  imports: [SearchComponent, NgFor, NgIf],
-  templateUrl: './recipes.component.html',
-  styleUrl: './recipes.component.scss',
+  selector: 'app-search-recipes',
+    imports: [SearchBarComponent, NgFor, NgIf, NavbarComponent],
+  templateUrl: './search-recipes.component.html',
+  styleUrl: './search-recipes.component.scss',
 })
-export class RecipesComponent {
+export class SearchRecipesComponent {
   @Input() searchedRecipe: any;
   recipes: RecipeInterface[] = [];
   isLoading = true;

@@ -22,7 +22,12 @@ export class HomeComponent {
     {
       name: 'Search Recipe',
       description: 'Search a recipe from a list of recipes',
-      routerLink: '/recipes'
+      routerLink: '/search-recipes'
+    },
+    {
+      name: 'Sort/Filter Recipe',
+      description: 'Sort or filter recipes',
+      routerLink: '/search-recipes'
     },
     {
       name: 'Progress bar',

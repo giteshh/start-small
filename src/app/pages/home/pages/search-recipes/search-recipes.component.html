@@ -1,4 +1,7 @@
-<app-search (searchResults)="onSearchRecipes($event)"></app-search>
+<app-navbar></app-navbar>
+
+<app-search-bar (searchResults)="onSearchRecipes($event)"></app-search-bar>
+
 <div class="cards">
   <div class="card" *ngFor="let recipe of recipes">
     <div class="image">

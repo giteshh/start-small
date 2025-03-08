@@ -4,12 +4,12 @@ import {RecipeInterface} from '../../../../interfaces/recipe-interface';
 import {FormsModule} from '@angular/forms';
 
 @Component({
-  selector: 'app-search',
+  selector: 'app-search-bar',
   imports: [FormsModule],
-  templateUrl: './search.component.html',
-  styleUrl: './search.component.css'
+  templateUrl: './search-bar.component.html',
+  styleUrl: './search-bar.component.css'
 })
-export class SearchComponent {
+export class SearchBarComponent {
   searchTerm: string = '';
   @Output() searchResults = new EventEmitter<RecipeInterface[]>();
 
