@@ -7,6 +7,7 @@ import {FilterRecipeComponent} from './pages/home/pages/filter-recipe/filter-rec
 import {ImageCarouselComponent} from './pages/home/pages/image-carousel/image-carousel.component';
 import {OtpInputComponent} from './pages/home/pages/otp-input/otp-input.component';
 import {StarRatingComponent} from './pages/home/pages/star-rating/star-rating.component';
+import {LikeButtonComponent} from './pages/home/pages/like-button/like-button.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -18,4 +19,5 @@ export const routes: Routes = [
   {path: 'image-carousel', component: ImageCarouselComponent},
   {path: 'otp-input', component: OtpInputComponent},
   {path: 'star-rating', component: StarRatingComponent},
+  {path: 'like-button', component: LikeButtonComponent},
 ];

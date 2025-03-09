@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<div class="main">
+  <h2>Simple Like & Follow button</h2>
+  <div class="card">
+    <div class="image">
+      <img src="https://react.semantic-ui.com/images/avatar/large/matthew.png" alt="avatar"/>
+    </div>
+
+    <div class="profile-name">
+      <h3>John Doe</h3>
+      <div class="follow-button">
+        <button [ngStyle]="{background: followButtonBackgroundColor, color: followButtonTextColor,
+        border: followButtonBorder}"
+                (click)="doFollow()">
+          {{ followButtonText }}
+        </button>
+      </div>
+    </div>
+
+    <div class="followers-count">
+      <div class="like-button">
+        <i *ngIf="!isLiked" (click)="doLike()" class="far fa-heart"></i>
+        <i *ngIf="isLiked" (click)="doLike()" class="fa fa-heart color-red"></i>
+        <p>{{ likesCount }} likes</p>
+      </div>
+      <p>{{ followersCount }} followers</p>
+    </div>
+  </div>
+
+  <div class="notification-card">
+    <p [ngStyle]="{color: notificationTextColor}">{{ notificationText }}</p>
+  </div>
+</div>

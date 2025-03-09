@@ -49,6 +49,11 @@ export class HomeComponent {
       description: 'Star rating component',
       routerLink: '/star-rating'
     },
+    {
+      name: 'Like Button',
+      description: 'Simple Like functionality',
+      routerLink: '/like-button'
+    },
   ]
 
 }
