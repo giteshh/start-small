@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<div class="main">
+  <div class="card">
+    <h2>Counter app</h2>
+    <div>
+      <h1>{{ count }}</h1>
+    </div>
+    <div class="button-group">
+      <button class="increment-button"
+              (click)="onIncrementCounter()">
+        <i class="fa fa-plus"></i>
+        Increment
+      </button>
+      <button class="reset-button"
+              (click)="onResetCounter()">
+        <i class="fa fa-redo"></i>
+        Reset
+      </button>
+      <button class="decrement-button"
+              (click)="onDecrementCounter()">
+        <i class="fa fa-minus"></i>
+        Decrement
+      </button>
+    </div>
+  </div>
+</div>

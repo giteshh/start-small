@@ -50,9 +50,14 @@ export class HomeComponent {
       routerLink: '/star-rating'
     },
     {
-      name: 'Like Button',
-      description: 'Simple Like functionality',
+      name: 'Like & Follow Button',
+      description: 'Like & follow functionality',
       routerLink: '/like-button'
+    },
+    {
+      name: 'Counter app',
+      description: 'Counter app',
+      routerLink: '/counter'
     },
   ]
 

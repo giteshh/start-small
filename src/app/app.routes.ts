@@ -8,6 +8,7 @@ import {ImageCarouselComponent} from './pages/home/pages/image-carousel/image-ca
 import {OtpInputComponent} from './pages/home/pages/otp-input/otp-input.component';
 import {StarRatingComponent} from './pages/home/pages/star-rating/star-rating.component';
 import {LikeButtonComponent} from './pages/home/pages/like-button/like-button.component';
+import {CounterComponent} from './pages/home/pages/counter/counter.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -20,4 +21,5 @@ export const routes: Routes = [
   {path: 'otp-input', component: OtpInputComponent},
   {path: 'star-rating', component: StarRatingComponent},
   {path: 'like-button', component: LikeButtonComponent},
+  {path: 'counter', component: CounterComponent},
 ];
