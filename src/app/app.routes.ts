@@ -5,6 +5,7 @@ import {ProgressBarComponent} from './pages/home/pages/progress-bar/progress-bar
 import {RecipeListComponent} from './pages/home/pages/recipes-list/recipe-list.component';
 import {FilterRecipeComponent} from './pages/home/pages/filter-recipe/filter-recipe.component';
 import {ImageCarouselComponent} from './pages/home/pages/image-carousel/image-carousel.component';
+import {OtpInputComponent} from './pages/home/pages/otp-input/otp-input.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -14,4 +15,5 @@ export const routes: Routes = [
   {path: 'progress-bar', component: ProgressBarComponent},
   {path: 'filter-recipes', component: FilterRecipeComponent},
   {path: 'image-carousel', component: ImageCarouselComponent},
+  {path: 'otp-input', component: OtpInputComponent}
 ];

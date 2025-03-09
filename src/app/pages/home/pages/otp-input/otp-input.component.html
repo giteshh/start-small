@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<div class="wrapper">
+  <div class="heading">
+    <h2>OTP Verification</h2>
+    <p>Please enter the code we have sent you.</p>
+  </div>
+  <form [formGroup]="otpForm" (ngSubmit)="onSubmitOtp()">
+    <div id="otp-container">
+      <div class="otp-container">
+        <div class="otp-box">
+          <input type="number" maxlength="1" formControlName="otp1" id="otp1" (keyup)="onKeyUp($event, 1)"/>
+        </div>
+        <div class="otp-box">
+          <input type="number" maxlength="1" formControlName="otp2" id="otp2" (keyup)="onKeyUp($event, 2)"/>
+        </div>
+        <div class="otp-box">
+          <input type="number" maxlength="1" formControlName="otp3" id="otp3" (keyup)="onKeyUp($event, 3)"/>
+        </div>
+        <div class="otp-box">
+          <input type="number" maxlength="1" formControlName="otp4" id="otp4" (keyup)="onKeyUp($event, 4)"/>
+        </div>
+        <div class="otp-box">
+          <input type="number" maxlength="1" formControlName="otp5" id="otp5" (keyup)="onKeyUp($event, 5)"/>
+        </div>
+        <div class="otp-box">
+          <input type="number" maxlength="1" formControlName="otp6" id="otp6" (keyup)="onKeyUp($event, 6)"/>
+        </div>
+      </div>
+    </div>
+    <input type="submit" value="Submit"/>
+  </form>
+
+  <div class="message">
+    <p>{{ showMessage }}</p>
+  </div>
+</div>

@@ -39,6 +39,11 @@ export class HomeComponent {
       description: 'Custom carousel',
       routerLink: '/image-carousel'
     },
+    {
+      name: 'Otp Input',
+      description: 'Custom otp input component',
+      routerLink: '/otp-input'
+    },
   ]
 
 }
