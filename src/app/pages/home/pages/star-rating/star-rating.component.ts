@@ -16,16 +16,16 @@ export class StarRatingComponent {
 
   stars = [1, 2, 3, 4, 5];
   rating = 0;
-  starColor = 'grey';
+  starColor = 'silver';
 
   setRating(event: any, index: number) {
     const star = event.target as HTMLElement;
 
-    if (star.style.color === 'grey') {
+    if (star.style.color === 'silver') {
       star.style.color = 'orange';
       this.rating = index + 1;
     } else {
-      star.style.color = 'grey';
+      star.style.color = 'silver';
       this.rating--;
     }
   }
