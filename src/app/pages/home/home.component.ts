@@ -44,6 +44,11 @@ export class HomeComponent {
       description: 'Custom otp input component',
       routerLink: '/otp-input'
     },
+    {
+      name: 'Star Rating',
+      description: 'Star rating component',
+      routerLink: '/star-rating'
+    },
   ]
 
 }

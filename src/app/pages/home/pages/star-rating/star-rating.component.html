@@ -1,0 +1,11 @@
+<app-navbar></app-navbar>
+<div class="main">
+  <h1>Star Rating Component</h1>
+  <div id="star">
+    <i *ngFor="let star of stars; let i = index" [ngStyle]="{color: starColor}" class="fa fa-star"
+       (click)="setRating($event, i)"></i>
+  </div>
+  <div class="display-star">
+    {{ rating }} star rating
+  </div>
+</div>
