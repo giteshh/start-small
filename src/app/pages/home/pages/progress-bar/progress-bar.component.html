@@ -1,14 +1,42 @@
 <app-navbar></app-navbar>
+
+
 <div class="main-container">
   <h1>Progress Bar</h1>
-  <div class="progress-bar-container">
-    <div class="progress-bar" [ngStyle]="{background : backgroundColor, width: completedPercentage + '%'}">
-      {{ completedPercentage }} %
+
+  <!--  form-->
+  <form class="colorful-form">
+    <div class="form-group">
+      <label class="form-label">Name:</label>
+      <input name="name" [(ngModel)]="name" placeholder="Enter your name"
+             class="form-input" type="text" (input)="onFromCompletion()">
     </div>
-  </div>
-  <button class="button" (click)="onIncrease()">
-    <div class="text">
-      Next
+    <div class="form-group">
+      <label class="form-label" for="email">Email:</label>
+      <input name="email" [(ngModel)]="email" placeholder="Enter your email"
+             class="form-input" id="email" type="email" (input)="onFromCompletion()">
     </div>
-  </button>
+    <div class="form-group">
+      <label class="form-label">Occupation:</label>
+      <input name="occupation" [(ngModel)]="occupation" placeholder="Enter your occupation"
+             class="form-input" id="occupation" type="email" (input)="onFromCompletion()">
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="email">Mobile:</label>
+      <input name="mobile" [(ngModel)]="mobile" placeholder="Enter your mobile" class="form-input"
+             id="mobile" type="number" (input)="onFromCompletion()">
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="email">Password:</label>
+      <input name="password" placeholder="Enter your password" class="form-input"
+             [(ngModel)]="password" id="password" type="password" (input)="onFromCompletion()">
+    </div>
+    <!--  progress-bar-->
+    <div class="progress-bar-container">
+      <div class="progress-bar"
+           [ngStyle]="{background: backgroundColor, width: completedPercentage}"></div>
+    </div>
+    <p class="completed-message">{{ completedPercentage }} % form completed</p>
+  </form>
+
 </div>

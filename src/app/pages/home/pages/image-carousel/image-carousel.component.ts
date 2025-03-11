@@ -1,13 +1,11 @@
 import {Component} from '@angular/core';
 import {DataService} from '../../../../services/data.service';
 import {RecipeInterface} from '../../../../interfaces/recipe-interface';
-import {NgForOf} from '@angular/common';
 import {NavbarComponent} from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-image-carousel',
   imports: [
-    NgForOf,
     NavbarComponent
   ],
   templateUrl: './image-carousel.component.html',
