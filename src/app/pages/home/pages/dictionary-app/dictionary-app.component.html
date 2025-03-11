@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+
+<div class="main-container">
+  <div>
+    <input class="input" name="text" [(ngModel)]="word"
+           placeholder="Searching Something ?" type="search"
+           (keydown)="getWordMeaning($event)">
+    <p>Type a word and press enter to get meaning, pronunciation !!</p>
+  </div>
+  <!--  results-->
+  <div *ngIf="result">
+    <div class="card-1">
+      <h2>{{ result.word }}</h2>
+      <p (click)="playAudioPronunciation()">pronunciations : {{ result.phonetic }}
+        <i *ngIf="audioPronunciationUrl" class="fa fa-volume-up"></i></p>
+    </div>
+
+    <div class="card-container">
+      <div class="card-1">
+        <h4>{{ result.meanings[0].partOfSpeech }}</h4>
+        <ul>
+          <li *ngFor="let item of result.meanings[0].definitions">{{ item.definition }}</li>
+        </ul>
+      </div>
+
+      <div class="card-1">
+        <h4>{{ result.meanings[1].partOfSpeech }}</h4>
+        <ul>
+          <li *ngFor="let item of result.meanings[1].definitions">{{ item.definition }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!result">
+    <h2>No Results !</h2>
+  </div>
+</div>

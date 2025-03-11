@@ -59,6 +59,11 @@ export class HomeComponent {
       description: 'Counter app',
       routerLink: '/counter'
     },
+    {
+      name: 'Dictionary app',
+      description: 'Dictionary app',
+      routerLink: '/dictionary-app'
+    },
   ]
 
 }

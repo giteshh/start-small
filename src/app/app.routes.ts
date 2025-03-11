@@ -9,6 +9,7 @@ import {OtpInputComponent} from './pages/home/pages/otp-input/otp-input.componen
 import {StarRatingComponent} from './pages/home/pages/star-rating/star-rating.component';
 import {LikeButtonComponent} from './pages/home/pages/like-button/like-button.component';
 import {CounterComponent} from './pages/home/pages/counter/counter.component';
+import {DictionaryAppComponent} from './pages/home/pages/dictionary-app/dictionary-app.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -22,4 +23,5 @@ export const routes: Routes = [
   {path: 'star-rating', component: StarRatingComponent},
   {path: 'like-button', component: LikeButtonComponent},
   {path: 'counter', component: CounterComponent},
+  {path: 'dictionary-app', component: DictionaryAppComponent},
 ];
